@@ -12,7 +12,7 @@
 
 <h2>Website</h2>
 
-[Link]()
+[Link](https://ianbridges.github.io/iansCodeQuiz/)
 <h2>Description</h2><p>This website made to test your basic coding knowledge!</p>
 <h2>Installation</h2><p>Just use the link above and you're good to go.</p>
 <h2>Usage</h2><p>Users can use the website to help practice and learn some coding information</p>
