@@ -4,6 +4,8 @@ var timer = 60;
 var interval;
 
 document.getElementById("quizPage").style.display = "none";
+document.getElementById("highScore").style.display = "none";
+document.getElementById("finished").style.display = "none";
 
 function start() {
     score = 0;
@@ -52,8 +54,56 @@ function checkAnswer() {
     }
 }
 
+function endQuiz() {
+    document.getElementById("quizPage").style.display = "none";
+    document.getElementById("finished").style.display = "block";
+    document.getElementById("score").innerHTML = "Your final score is: " + score + "/" + questions.length;
+    document.getElementById("answer").innerHTML = "answer";
+}
+
+function submit() {
+    var initials = document.getElementById("initials").value;
+    var entry = "<span class='indent'></span>" + initials + "<span class='space'></span>" + score + "<br>";
+    var records = localStorage.getItem("scores");
+    if (records == null) {
+        records = entry;
+    }
+    else {
+        records += entry;
+    }
+    localStorage.setItem("scores", records);
+    document.getElementById("hscore").innerHTML = records;
+    document.getElementById("finished").style.display = "none";
+    document.getElementById("highScore").style.display = "block";
+}
+
+function clear() {
+    localStorage.setItem("scores", "");
+    document.getElementById("hscore").innerHTML = "";
+}
+
+function back() {
+    document.getElementById("initials").value = "";
+    document.getElementById("highScore").style.display = "none";
+    document.getElementById("start").style.display = "block";
+
+}
+
+function viewHS() {
+    var records = localStorage.getItem("scores");
+    document.getElementById("hscore").innerHTML = records;
+    document.getElementById("start").style.display = "none";
+    document.getElementById("quizPage").style.display = "none";
+    document.getElementById("finished").style.display = "none";
+    document.getElementById("highScore").style.display = "block";
+}
+
 document.getElementById("a").addEventListener("click", checkAnswer);
 document.getElementById("b").addEventListener("click", checkAnswer);
 document.getElementById("c").addEventListener("click", checkAnswer);
 document.getElementById("d").addEventListener("click", checkAnswer);
 document.getElementById("startButton").addEventListener("click", start);
+document.getElementById("submit").addEventListener("click", submit);
+document.getElementById("clear").addEventListener("click", clear);
+document.getElementById("back").addEventListener("click", back);
+document.getElementById("viewHS").addEventListener("click", viewHS);

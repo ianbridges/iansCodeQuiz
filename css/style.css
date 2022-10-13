@@ -87,3 +87,47 @@ button:active {
     font-size: 20px;
     color: #8b8b8b;
 }
+
+#hscoreTable {
+    margin: 100px 200px 0 300px;
+}
+
+#fname {
+    width: 100%;
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.space {
+    padding-right:10px;
+}
+
+#viewHS {
+    color: rgb(183, 0, 255);
+}
+
+#finished {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 100px 0 100px 200px;
+    vertical-align: top;
+    float: left;
+    justify-content: space-evenly;
+    size: 800px;
+}
+
+#addInitials {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+#hscore {
+    border: solid 2px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: rgb(184, 184, 184);
+}
