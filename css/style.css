@@ -34,3 +34,56 @@ h2, h3{
     padding: 0%;
 }
 
+#quizPage {
+    font-size: 30px;
+    padding: 0 100px 0 200px;
+    text-align: left;
+}
+
+.H1 {
+    padding: 50px 50px 0 0;
+}
+
+#question {
+    display: block;
+    width: 100%;
+    padding: 15px 15px 85px 15px;
+    text-align: left;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.Q {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: solid rgb(248, 248, 248) 3px;
+    padding: 0 200 0 0;
+}
+
+button {
+    margin: 2.5px;
+    background-color: #382d9b;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 175px;
+    height: 25px;
+    padding: 0 0 0 25px;
+    font-weight: bold;
+    transition-duration: 0.5;
+}
+
+button:active {
+    background-color: #ce40ce;
+}
+
+#answer {
+    font-style: italic;
+    padding: 0 0 0 15px;
+    font-size: 20px;
+    color: #8b8b8b;
+}
